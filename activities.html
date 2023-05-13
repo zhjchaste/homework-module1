@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"></title>
-        <title> Great Cliff's Logo</title>
-    </head>
-    <body>
-        <!-- container to wrap everything -->
-        <div id="container">
-            <header>
-            <img src="images2/cliff_ocean.jpg" alt="Ocean View Cliff" width="1280" height="564">
-                <div class="main-header"></div>
-                <div class="logo">
-                 <img src="images2/logo.png" alt="Great Cliff Logo" width="125">
-                </div>
-            </header>
+        
+<head>
+    <title> Great Cliffs</title>
+    <meta charset="utf-8">
+    <!-- font  awesome -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- embed  style methed-->
+    <link rel="stylesheet" href="style.css">
+</head>  
 
-            <!-- Main Navigation -->
-            <nav class="main-menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Cliffs</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <!-- End of Main Navigation -->
+<body>  
+            <div id="activities">
+                
+                <header>
+                    
+                    <div class="main-header">
+                        
+                        <div class="logo">
+                            <img src="images2/logo.png" alt="Great Cliff Logo" width="125">
+                        </div>
+                        <nav class="main-menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li>Cliffs</li>
+                                <li class="active"><a href="activities.html">Activities</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div> 
+                </header>
+            </div>
 
+     
             <!-- Main Content-->
             <main>
                 <h1>Activities</h1>
                 <p>There are many planned activities at all the cliff sites. Some are scheduled daily, weekly, monthly and yearly. These activities are not however run by the state park and recreational department. They are operated and manage by private vendors but are partners with the state department. Therefore, for schedule inquiries or information, please contact them directly. For a list of activities, please refer to the table below:</p>
-                <table border="1">
+                <table>
                     <caption>Activities at the Cliffs</caption>
+                    <thead>
                  
                         <tr>
                             <th>Activity</th>
@@ -40,7 +48,8 @@
                             <th>East Cliff</th>
                             <th>South Cliff</th>
                         </tr>
-                   
+                    </thead>
+                    <tbody>
                         <tr>
                             <td>Hiking</td>
                             <td>College Hikes</td>
@@ -79,9 +88,45 @@
                             <td>Campground Adventure</td>
                             <td>Sunset Camping</td>
                         </tr>
-                   
+                    </tbody>
                 </table>
+                <section>
+                    <ul id="partners">
+                        <li class="partner">
+                        <img src="images2/partners/partner-bustour.png" alt="Partner Bus Tour"></li>
+                        <li class="partner">
+                        <img src="images2/partners/partner-cabinrental.png" alt="Partner Cabin Rental"></li>
+                        <li class="partner">
+                        <img src="images2/partners/partner-campingadv.png" alt="Partner Camping Adventure"></li>
+                        <li class="partner">
+                        <img src="images2/partners/partner-collegetours.png" alt="Partner College Tours"></li>
+                        <li class="partner">
+                        <img src="images2/partners/partner-rentalbike.png" alt="Partner Bike Rentals"></li>
+                        <li class="partner">
+                        <img src="images2/partners/partner-tourgroup.png" alt="Partner Tour Group"></li>
+
+                    </ul>
+                </section>
             </main>
-          
-    </body>
+        </div>  
+        <footer>
+            <div id="nondisclaimer">
+                <div class="copy">&copy; Copyright 2023::GreatCliffs.com</div>
+
+                
+                <div class="social">
+                 <a href="#" class="fa fa-facebook"></a>
+                 <a href="#" class="fa fa-instagram"></a> 
+                 <a href="#" class="fa fa-twitter"></a>
+
+                </div>
+
+            </div>
+            <div id="disclaimer">
+                <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
+
+            </div>
+        </footer>  
+     
+</body>
 </html>
