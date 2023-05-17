@@ -91,7 +91,7 @@
                         var min = d.getMinutes();
                         var sec = d.getSeconds();
                         var ampm;
-                
+                        
                         if (sec < 10) {
                             sec = "0" + sec;
                         }
@@ -106,11 +106,45 @@
                         } else {
                             ampm = "AM";
                         }
-                        var time = hr + ":" + min + ":" + sec + " " + ampm;
-                        document.getElementById("Clock").innerText = time; 
+                        var utchr = d.getUTCHours();
+                        var timediff = utchr - hr;
+                        var adjTimeDiff = Math.abs(timediff);
+                        var timeZone;
+                        
+                        if (timediff > 0) {
+                            timeZone = "GMT-" + adjTimeDiff;
+                        } else if (timediff < 0) {
+                            timeZone = "GMT+" + adjTimeDiff;
+                        } else {
+                            timeZone = "GMT";
+                        }
+                        
+                        if (hr >= 7 && hr < 8) {
+                            timeZone = "PT"; // Pacific Time
+                        } else if (hr >= 8 && hr < 9) {
+                            timeZone = "MT"; // Mountain Time
+                        } else if (hr >= 9 && hr < 10) {
+                            timeZone = "CT"; // Central Time
+                        } else if (hr >= 10 && hr < 11) {
+                            timeZone = "ET"; // Eastern Time
+                        } else if (hr >= 11 && hr < 12) {
+                            timeZone = "PT"; // Pacific Time
+                        } else if (hr >= 12 && hr < 13) {
+                            timeZone = "MT"; // Mountain Time
+                        } else if (hr >= 13 && hr < 14) {
+                            timeZone = "CT"; // Central Time
+                        } else {
+                            timeZone = "PT"; // Pacific Time
+                        }
+                        
+                    
+                        var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone;
+                        document.getElementById("Clock").innerText = time;
                     }
+                    
                     setInterval(currentTime, 1000);
                 </script>
+                
                 
     
     
