@@ -11,26 +11,31 @@
     </head>  
 
     <body>  
-        <div id="Home">
-            
-            <header>
-                
-                <div class="main-header">
-                    
-                    <div class="logo">
-                        <img src="images2/logo.png" alt="Great Cliff Logo" width="125">
+                    <div id="Home">
+                        
+                        <header>
+                            
+                            <div class="main-header">
+                                
+                                <div class="logo">
+                                    <img src="images2/logo.png" alt="Great Cliff Logo" width="125">
+                                </div>
+                                <nav class="main-menu">
+                                    <ul>
+                                        <li class="active"><a href="index.html">Home</a></li>
+                                        <li><a href="Cliffs.html">Cliffs</a></li>
+                                        <li><a href="activities.html">Activities</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div> 
+                        </header>
                     </div>
-                    <nav class="main-menu">
-                        <ul>
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="Cliffs.html">Cliffs</a></li>
-                            <li><a href="activities.html">Activities</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div> 
-            </header>
-        </div>
+
+                <section id="timeofday">
+                    <span>Your Current Local Time:</span>
+                    <span id="Clock"></span>
+                </section>
             
             
                 
@@ -77,7 +82,38 @@
 
                     </div>
                 </footer>
-        
+
+
+                <script>
+                    function currentTime() {
+                        var d = new Date();
+                        var hr = d.getHours();
+                        var min = d.getMinutes();
+                        var sec = d.getSeconds();
+                        var ampm;
+                
+                        if (sec < 10) {
+                            sec = "0" + sec;
+                        }
+                        if (min < 10) {
+                            min = "0" + min;
+                        }
+                        if (hr == 12) {
+                            ampm = "PM";
+                        } else if (hr > 12) {
+                            hr -= 12;
+                            ampm = "PM";
+                        } else {
+                            ampm = "AM";
+                        }
+                        var time = hr + ":" + min + ":" + sec + " " + ampm;
+                        document.getElementById("Clock").innerText = time; 
+                    }
+                    setInterval(currentTime, 1000);
+                </script>
+                
+    
+    
        
             
     </body>       
