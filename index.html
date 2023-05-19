@@ -47,7 +47,7 @@
                     <p>Located within a 100 mile radius from Irvine, California, they can be reached by roads easily. The closest cliff to Irvine is West Cliff, which is the most popular and most visited.</p>
                     <section>
                         <ul id="partners">
-                            <li class="partner">
+                            <!--<li class="partner">
                             <img src="images2/partners/partner-bustour.png" alt="Partner Bus Tour"></li>
                             <li class="partner">
                             <img src="images2/partners/partner-cabinrental.png" alt="Partner Cabin Rental"></li>
@@ -58,7 +58,7 @@
                             <li class="partner">
                             <img src="images2/partners/partner-rentalbike.png" alt="Partner Bike Rentals"></li>
                             <li class="partner">
-                            <img src="images2/partners/partner-tourgroup.png" alt="Partner Tour Group"></li>
+                            <img src="images2/partners/partner-tourgroup.png" alt="Partner Tour Group"></li>-->
     
                         </ul>
                     </section>
@@ -136,6 +136,30 @@
                     
                     setInterval(currentTime, 1000);
                 </script>
+                <script>
+                    var photos = [];
+                    var partners = [
+                        "partner-bustour",
+                        "partner-cabinrental",
+                        "partner-campingadv",
+                        "partner-collegetours",
+                        "partner-rentalbike",
+                        "partner-tourgroup"
+                    ];
+                
+                    var partnerList = [];
+                    var openList = "<li class='partner'>";
+                    var closeList = "</li>";
+                
+                    for (var i = 0; i < partners.length; i++) {
+                        var partnerImage = "<img src='images2/partners/" + partners[i] + ".png'>";
+                        var image = openList + partnerImage + closeList;
+                        partnerList.push(image);
+                    }
+                
+                    document.getElementById("partners").innerHTML = partnerList.join("");
+                </script>
+                
                 
                 
     
