@@ -251,7 +251,8 @@
     }
     form{
         width:1300px;
-        margin: 2em 0;
+        
+        
     }
     legend{
         color:#125688;
@@ -262,7 +263,7 @@
         border-color: #9ed034;
         margin: 20px 100px 20px 80px;
         padding-left: 30px;
-        height: 700px;
+        height: 800px;
     }
     .phone,.email{
         padding-left: 80px;
@@ -270,6 +271,7 @@
     label {
         font-weight: bold;
         margin:20px 0 10px 0;
+        width:800px;
         
     }
     .textbox label,.radio label,.selectmenu label{
@@ -281,7 +283,7 @@
          width: 60%;
     }
     .radio label input[type="radio"] {
-        display: inline-block;
+        
         align-items:center;
         margin-left: 10px;
     }
@@ -305,9 +307,9 @@
       .button input[type="submit"] {
         background-color: #3B5998;
         color: white;
-       margin-left:548px;
+       margin-left:500px;
         border:none;
-        padding: 15px 32px;
+        padding: 10px 32px;
         text-align:center;
 
 
@@ -353,7 +355,43 @@
     #Clock{
         color:#125688;
     }
+form .button input {
+    width: 8em;
+    height:2.5em;
+    font-size:1.2em;
+    font-weight:bold;
+    /*background-color: #4977d1;*/
+    color:#ffffff;
+    border:none;
+    display: flex;
+    justify-content: flex-end;
 
+}
+.randomcode {
+    display: flex;
+    align-items: center;
+    padding-left:345px;
+    
+  }
+  #codes {
+    background-color: #888;
+    width: 6em;
+    height: 2em;
+    font-size: 1em;
+    
+    color:black;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.randomcode input[type="text"],
+.randomcode p {
+    margin-left: 2em;
+}
+
+  
+  
       
     
       

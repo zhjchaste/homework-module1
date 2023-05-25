@@ -131,80 +131,13 @@
             </div>
         </footer>  
      
-        <script>
-            function currentTime() {
-                var d = new Date();
-                var hr = d.getHours();
-                var min = d.getMinutes();
-                var sec = d.getSeconds();
-                var ampm;
+         <!--Digital Clock-->
+         <script src="js/digclock.js">
                 
-                if (sec < 10) {
-                    sec = "0" + sec;
-                }
-                if (min < 10) {
-                    min = "0" + min;
-                }
-                if (hr == 12) {
-                    ampm = "PM";
-                } else if (hr > 12) {
-                    hr -= 12;
-                    ampm = "PM";
-                } else {
-                    ampm = "AM";
-                }
-                var utchr = d.getUTCHours();
-                var timediff = utchr - hr;
-                var adjTimeDiff = Math.abs(timediff);
-                var timeZone;
-                
-                if (timediff > 0) {
-                    timeZone = "GMT-" + adjTimeDiff;
-                } else if (timediff < 0) {
-                    timeZone = "GMT+" + adjTimeDiff;
-                } else {
-                    timeZone = "GMT";
-                }
-                
-                if (timediff = -7 ) {
-                    timeZone = "PT"; // Pacific Time
-                } else if (timediff = -6) {
-                    timeZone = "MT"; // Mountain Time
-                } else if (timediff = -5) {
-                    timeZone = "CT"; // Central Time
-                } else if (timediff = -4){
-                    timeZone = "ET"; // Eastern Time
-                }
-                
-            
-                var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone;
-                document.getElementById("Clock").innerText = time;
-            }
-            
-            setInterval(currentTime, 1000);
-        </script>
-        <script>
-            var photos = [];
-            var partners = [
-                "partner-bustour",
-                "partner-cabinrental",
-                "partner-campingadv",
-                "partner-collegetours",
-                "partner-rentalbike",
-                "partner-tourgroup"
-            ];
-        
-            var partnerList = [];
-            var openList = "<li class='partner'>";
-            var closeList = "</li>";
-        
-            for (var i = 0; i < partners.length; i++) {
-                var partnerImage = "<img src='images2/partners/" + partners[i] + ".png'>";
-                var image = openList + partnerImage + closeList;
-                partnerList.push(image);
-            }
-        
-            document.getElementById("partners").innerHTML = partnerList.join("");
-        </script>
+         </script>
+         <!-- partners -->
+         <script src="js/site_scripts.js">
+
+         </script>
 </body>
 </html>
