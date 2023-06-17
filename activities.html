@@ -101,6 +101,13 @@
                 </tr>
             </tbody>
         </table>
+        <div id="activity-details" class="d-none">
+            <h3 id="activity-title"></h3>
+            <div id="activity-description"></div>
+            <button id="back-button" class="btn btn-success">Back to Activities</button>
+            <button id="info-button" class="btn btn-primary">Get Info</button>
+        </div>
+
         <div id="displaySelected">
             <div id="result">
                 <h4>My selected activities to enquire:</h4>
@@ -154,6 +161,40 @@
     <script src="js/digclock.js"></script>
     <script src="js/site_scripts.js"></script>
     <script src="js/activities.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $('table#activity-table tbody td').on('click', function () {
+                
+                var colIndex = $(this).index();
+                var rowIndex = $(this).parent().index();
 
+            
+                var activityTitle = $('table#activity-table thead th').eq(colIndex).text();
+                var activityDescription = $('table#activity-table tbody tr').eq(rowIndex).find('td').eq(colIndex).text();
+
+                
+                $('#activity-title').text(activityTitle);
+                $('#activity-description').text(activityDescription);
+
+               
+                $('#activity-details').removeClass('d-none');
+            });
+
+            
+            $('#back-button').on('click', function () {
+                
+                $('#activity-details').addClass('d-none');
+            });
+
+            
+            $('#info-button').on('click', function () {
+            
+            });
+        });
+    </script>
 </body>
 </html>
